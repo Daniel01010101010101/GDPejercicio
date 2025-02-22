@@ -54,7 +54,7 @@ with st.form("api_form"):
             'native-country': native_country
         }
 
-        url = 'http://127.0.0.1:8000/adults_model/'
+        url = 'https://gdpejercicio-production.up.railway.app/adults_model/'
 
         exito, respuesta = realizar_solicitud_post(url, datos_json)
 
