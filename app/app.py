@@ -28,13 +28,16 @@ st.markdown(
             margin-right: auto;
             width: 200px;
         }
+        body {
+        background-color: #D0E8FF;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
 # Mostrar una imagen de un robot en la parte superior
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Robot_Icon.svg/200px-Robot_Icon.svg.png", use_container_width=True)
+st.image("https://www.svgrepo.com/show/276264/robot.svg", use_container_width=True)
 
 # Título de la aplicación
 st.markdown("<p class='title'>Consulta de API para Modelo de Adultos</p>", unsafe_allow_html=True)
@@ -98,3 +101,4 @@ with st.form("api_form"):
             st.success(f'Solicitud exitosa. Respuesta: {respuesta}')
         else:
             st.error(f'Error en la solicitud: {respuesta}')
+
