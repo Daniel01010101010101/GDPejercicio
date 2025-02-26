@@ -4,12 +4,13 @@ import requests
 # Configurar la página con título e icono
 st.set_page_config(page_title="Consulta de API para Modelo de Adultos", page_icon="🤖", layout="wide")
 
-# Aplicar estilos personalizados
+# Aplicar estilos personalizados con fondo azul
 st.markdown(
     """
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #ADD8E6;
         }
         .title {
             font-size: 40px;
@@ -28,16 +29,13 @@ st.markdown(
             margin-right: auto;
             width: 200px;
         }
-        body {
-        background-color: #D0E8FF;
-    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Mostrar una imagen de un robot en la parte superior
-st.image("https://www.svgrepo.com/show/276264/robot.svg", use_container_width=True)
+# Mostrar una imagen de un robot bailando
+st.image("https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif", use_container_width=False)
 
 # Título de la aplicación
 st.markdown("<p class='title'>Consulta de API para Modelo de Adultos</p>", unsafe_allow_html=True)
@@ -101,4 +99,3 @@ with st.form("api_form"):
             st.success(f'Solicitud exitosa. Respuesta: {respuesta}')
         else:
             st.error(f'Error en la solicitud: {respuesta}')
-
