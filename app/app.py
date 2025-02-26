@@ -34,7 +34,7 @@ st.markdown(
 )
 
 # Mostrar una imagen de un robot en la parte superior
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Robot_Icon.svg/200px-Robot_Icon.svg.png", use_column_width=False)
+st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Robot_Icon.svg/200px-Robot_Icon.svg.png", use_container_width=True)
 
 # Título de la aplicación
 st.markdown("<p class='title'>Consulta de API para Modelo de Adultos</p>", unsafe_allow_html=True)
