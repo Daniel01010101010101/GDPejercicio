@@ -1,21 +1,57 @@
 import streamlit as st
 import requests
 
+# Configurar la página con título e icono
+st.set_page_config(page_title="Consulta de API para Modelo de Adultos", page_icon="🤖", layout="wide")
+
+# Aplicar estilos personalizados
+st.markdown(
+    """
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: #4A90E2;
+        }
+        .subtitle {
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+        .stMarkdown img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Mostrar una imagen de un robot en la parte superior
+st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Robot_Icon.svg/200px-Robot_Icon.svg.png", use_column_width=False)
+
+# Título de la aplicación
+st.markdown("<p class='title'>Consulta de API para Modelo de Adultos</p>", unsafe_allow_html=True)
+
+# Subtítulo
+st.markdown("<p class='subtitle'>Optimizada con mejoras visuales</p>", unsafe_allow_html=True)
+
 # Función para realizar la solicitud POST a la API
 def realizar_solicitud_post(url, data):
     try:
         response = requests.post(url, json=data)
-        # Considera añadir headers si necesitas pasar un token de autorización
-        # Ejemplo: response = requests.post(url, json=data, headers={"Authorization": "Bearer tu_token_aqui"})
         if response.status_code == 200:
             return True, response.json()
         else:
             return False, response.text
     except Exception as e:
         return False, str(e)
-
-
-st.title("Consulta de API para Modelo de Adultos")
 
 # Formulario para introducir los datos requeridos por la API
 with st.form("api_form"):
