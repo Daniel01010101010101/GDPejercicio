@@ -35,7 +35,7 @@ st.markdown(
 )
 
 # Mostrar una imagen de un robot bailando
-st.image("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJwMWpzbGFjMWxvN3AyaGI5ZGh1cjVzNnh2cHM5emplMTN1YXBxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLEdq1A9PT0BZo27s3/giphy.gif", use_container_width=False)
+st.image("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnVlbXpwY2cxazgzc29qc3kxaGplbWx3c3k4ZG9pcHFwa21xdW41cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pIMlKqgdZgvo4/giphy.gif", use_container_width=False)
 
 # Título de la aplicación
 st.markdown("<p class='title'>Consulta de API para Modelo de Adultos</p>", unsafe_allow_html=True)
